@@ -3,18 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>แบบฟอร์มเก็บข้อมูล</title>
+<title>แบบฟอร์มบันทึกงาน</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: "Segoe UI", sans-serif;
-}
-
 body{
-    background: linear-gradient(135deg,#fff9c4,#ffe082);
+    font-family: Arial, sans-serif;
+    background:#FFF8DC;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -22,53 +16,52 @@ body{
 }
 
 .container{
-    background:#fff;
-    width:380px;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    width:420px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 h2{
     text-align:center;
     color:#d4a017;
-    margin-bottom:20px;
 }
 
 label{
+    font-weight:bold;
     display:block;
     margin-top:12px;
-    margin-bottom:5px;
-    font-weight:bold;
 }
 
-input, select{
+input, textarea{
     width:100%;
     padding:10px;
-    border:2px solid #fdd835;
-    border-radius:10px;
-    outline:none;
+    margin-top:5px;
+    border:2px solid #FFD54F;
+    border-radius:8px;
+    box-sizing:border-box;
 }
 
-input:focus, select:focus{
-    border-color:#fbc02d;
+textarea{
+    resize:none;
+    height:100px;
 }
 
 button{
     width:100%;
     margin-top:20px;
     padding:12px;
-    border:none;
-    border-radius:10px;
-    background:#fbc02d;
+    background:#FBC02D;
     color:white;
+    border:none;
+    border-radius:8px;
     font-size:16px;
     cursor:pointer;
-    transition:.3s;
 }
 
 button:hover{
-    background:#f9a825;
+    background:#F9A825;
 }
 </style>
 </head>
@@ -76,23 +69,19 @@ button:hover{
 <body>
 
 <div class="container">
-    <h2>แบบฟอร์มเก็บข้อมูล</h2>
+    <h2>📝 แบบฟอร์มบันทึกงาน</h2>
 
     <form>
-        <label>ชื่อ-นามสกุล</label>
-        <input type="text" placeholder="กรอกชื่อ">
+        <label>ชื่องาน</label>
+        <input type="text" placeholder="กรอกชื่องาน">
 
-        <label>อายุ</label>
-        <input type="number" placeholder="กรอกอายุ">
+        <label>วันที่</label>
+        <input type="date">
 
-        <label>เพศ</label>
-        <select>
-            <option>ชาย</option>
-            <option>หญิง</option>
-            <option>ไม่ระบุ</option>
-        </select>
+        <label>รายละเอียดงาน</label>
+        <textarea placeholder="บันทึกรายละเอียดงาน..."></textarea>
 
-        <button type="submit">บันทึกข้อมูล</button>
+        <button type="submit">บันทึกงาน</button>
     </form>
 </div>
 
